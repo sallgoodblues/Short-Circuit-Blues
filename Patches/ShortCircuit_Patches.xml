@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods> <li>RT Fuse</li> </mods>
+		<match Class="PatchOperationSequence"> <operations>
+			
+			<li Class="PatchOperationAdd"> <xpath>/Defs</xpath> <value>
+				<DesignatorDropdownGroupDef> <defName>SrCircuitBreakers</defName> </DesignatorDropdownGroupDef>
+			</value> </li>
+			
+			<li Class="PatchOperationAdd"> <xpath>Defs/ThingDef[defName="Building_RTCircuitBreaker"]</xpath> <value>
+				<designatorDropdown>SrCircuitBreakers</designatorDropdown>
+				<uiIconPath>RT_Buildings/Building_RTCircuitBreaker_south</uiIconPath>
+			</value> </li>
+			
+			<li Class="PatchOperationAdd"> <xpath>/Defs</xpath> <value>
+	
+				<ThingDef ParentName="BuildingBase">
+					<defName>Sr_CircuitBreaker_OnWall</defName> <label>circuit breaker on wall</label>
+					<description>A set of automatic circuit breakers on wall. Handles up to 1800 Wd discharge, will flick off if tripped.</description>
+					<designationCategory>Power</designationCategory> <designatorDropdown>SrCircuitBreakers</designatorDropdown>
+					<minifiedDef>MinifiedThing</minifiedDef> <thingCategories> <li>BuildingsPower</li> </thingCategories>
+					<graphicData>
+						<texPath>Things/Building/Power/CbOw</texPath>
+						<graphicClass>Graphic_Multi</graphicClass>
+						<drawSize>(1.1, 1.1)</drawSize>
+						<damageData> <rect>(0.2,0.2,0.6,0.6)</rect> </damageData>
+					</graphicData>
+					<uiIconPath>Things/Building/Power/CbOw_south</uiIconPath>
+					<size>(1, 1)</size> <constructEffect>ConstructMetal</constructEffect>
+					<clearBuildingArea>false</clearBuildingArea> <altitudeLayer>Blueprint</altitudeLayer>
+					<passability>Standable</passability> <fillPercent>0.1</fillPercent> <pathCost>70</pathCost>
+					<building>
+						<isInert>true</isInert> <isEdifice>false</isEdifice>
+						<ai_chillDestination>false</ai_chillDestination>
+					</building>
+					<rotatable>True</rotatable> <defaultPlacingRot>South</defaultPlacingRot>
+					<statBases>
+						<MaxHitPoints>100</MaxHitPoints> <WorkToBuild>1500</WorkToBuild>
+						<Flammability>1.0</Flammability> <Mass>10</Mass> <Beauty>-2</Beauty>
+					</statBases>
+					<costList>
+						<Steel>50</Steel> <Plasteel>4</Plasteel> <ComponentIndustrial>1</ComponentIndustrial>
+					</costList>
+					<researchPrerequisites> <li>ResearchProject_RTCircuitBreakers</li> </researchPrerequisites>
+					<comps>
+						<li Class="CompProperties_Power"> <compClass>CompPowerTransmitter</compClass>
+							<transmitsPower>True</transmitsPower>
+						</li>
+						<li Class="CompProperties_Flickable" /> <li Class="CompProperties_Breakdownable"/>
+						<li Class="RT_Fuse.CompProperties_RTFuse"> <compClass>RT_Fuse.CompRTFuse</compClass>
+							<surgeMitigation>1800</surgeMitigation> <breakdownOnTrip>false</breakdownOnTrip>
+						</li>
+					</comps>
+				</ThingDef>
+				
+			</value> </li>
+		</operations> </match>
+	</Operation>
+		
+	<!-- Seems Unnecessary 
+	<Operation Class="PatchOperationFindMod">
+		<mods> <li>Power Logic</li> </mods>
+		<match Class="PatchOperationSequence"> <operations>
+			<li Class="PatchOperationTest">
+				<xpath>*/ThingDef[defName="SupesFuse"]</xpath> </li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="SupesFuse"]/comps</xpath>
+						<value> <li Class="CompProperties_Flickable"/> </value>
+				</li>
+		</operations> </match>
+	</Operation>
+	 -->
+</Patch>

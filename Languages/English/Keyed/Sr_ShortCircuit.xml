@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+	<SrSettings>Battery Drain Settings</SrSettings>
+	<SrDrain>Drain: %{0}</SrDrain>
+	<SrDrainMin>Min Drain: %{0}</SrDrainMin>
+	<SrDrainMax>Max Drain: %{0}</SrDrainMax>
+	
+    <ZzztNone>Short circuits will not drain any power from the batteries.</ZzztNone>
+    <ZzztAll>Short circuits will drain all {0} from the batteries.</ZzztAll>
+	<ZzztSome>Short circuits will drain %{1} {0} from the batteries.</ZzztSome>
+	<ZzztRand>Short circuits will randomly drain between %{1} and %{2} {0} from the batteries.</ZzztRand>	
+
+	<SrGetFuse>Try with a fuse mod; </SrGetFuse>
+	<SrPowerLogic>Power Logic</SrPowerLogic>
+	<SrRTFuse>RT Fuse</SrRTFuse>
+	
+	<!-- Non-Fused with Fuse Mods -->
+	<SrFuseless>Battery Drain without Fuse: {0}</SrFuseless>
+	<SrFuselessT>Non-fused power drain compared to the fused one.</SrFuselessT>
+	<SrTotalStored>Total Stored</SrTotalStored>
+	<SrSameFused>Same as Mitigated</SrSameFused>
+	<SrMultFused>{0} * Mitigated</SrMultFused>
+	<SrNonFusedSame>In a short circuit event whitout proper fuse mitigation, power drain will be same as the mitigated drain.</SrNonFusedSame>
+	<SrNonFusedTimes>In a short circuit event whitout proper fuse mitigation, power drain will be {0} * mitigated drain.</SrNonFusedTimes>
+	<SrNonFusedAll>In a short circuit event whitout proper fuse mitigation, all the stored power will be lost.</SrNonFusedAll>
+	
+	<!-- RT Fuse -->
+	<RTFuseExtras>RT Fuse Extras</RTFuseExtras>
+	<RTMitigMult>Mitigation Power Multiplier: {0}</RTMitigMult>
+	<RTMitigMultN>No Mitigation Power Multiplier</RTMitigMultN>
+	<RTMitigMultT>Multiplier to be applied to the Circuit Breakers' mitigation power (w). This won't change the Circuit Breaker's name or description, but only it's function.</RTMitigMultT>
+	
+	<RTSurplus>Surplus Mitigation Share: {0}*Surplus(W)</RTSurplus>
+	<RTSurplusN>No Surplus Mitigation Share</RTSurplusN>
+	<RTSurplusT>{0}*Mitigation Surplus(w) of the non-affected fuses will be reduced from each battery's power drain.</RTSurplusT>
+	
+	<!-- PowerLogic -->
+	<PowerLogicExtras>Power Logic Extras</PowerLogicExtras>
+	<PowerLogicExtrasT>Power Logic fuses should be placed on straight lines, not corners. They will only work properly if they are in between the battery and the short-circuit culprit. They won't be able to protect any parallel lines without a fuse. Their mitigation power is infinite, but only if placed properly.</PowerLogicExtrasT>
+	<PLFuseChance>Fuse chance: %{0}</PLFuseChance>
+	<PLFuseMin>Min Fuse chance: %{0}</PLFuseMin>
+	<PLFuseMax>Max Fuse chance: %{0}</PLFuseMax>
+	<PLFuseDefault>Fuse chance: %50 (Power Logic default)</PLFuseDefault>
+	<PLFuseChanceT>The chance for the connected fuses to be activated in a Short Circuit event. It's calculated seperately for each fuse in the system. Batteries on the other side of the disabled fuse will not be affected from any power drain. (Power Logic default is %50).</PLFuseChanceT>
+	
+	<PLRand>Randomize Fuse Chance</PLRand>
+	<PLFlic>Flick instead of Breakdown Patch</PLFlic>
+	<PLFlicT>In a short circuit event, fuses will be flicked instead of breaking down.</PLFlicT>
+	<PLProtec>Prevent Explosions Patch</PLProtec>
+	<PLProtecT>Fuses will prevent explosions when properly activated.</PLProtecT>
+	
+	<!-- SUMMARY -->
+	<SrSummary>Summary</SrSummary>
+	<SrStored>of the stored energy</SrStored>
+	<SrTotal>of the total capacity</SrTotal>
+	<SrRandomize>Randomize</SrRandomize> <SrRandomizeT>A little Randy-ness for the scene.</SrRandomizeT>
+	<SrStoredT>Power drain will be proportioned to the stored energy in the batteries.</SrStoredT>
+	<SrTotalT>Power drain will be proportioned to the total capacity of the batteries.</SrTotalT>
+	<!-- PL Summary -->
+	<PLSumRand>There is between %{0} and %{1}</PLSumRand> <PLSumSum>There is %{0}</PLSumSum>
+	<PLMidSum> chance for the closest fuses to the accident to </PLMidSum>
+	<PLFuseBreak>break</PLFuseBreak> <PLFuseFlick>flick</PLFuseFlick>
+	<PLEndProtec> and protect against any explosions or power loss as set.</PLEndProtec>
+	<PLEndWhack> to prevent power loss. But they won't protect against explosions as default.</PLEndWhack>
+	
+	<!-- RT Summary -->
+	<RTMtgMult>Circuit Breakers' mitigation (w) will be {0} times powerful.</RTMtgMult>
+	<RTMtgSame>Circuit Breakers' mitigation power will be the same as default.</RTMtgSame>
+	<RTSurplusNp>Excess mitigation power won't affect the power drain.</RTSurplusNp>
+	
+	<!-- EVENT -->
+	<!-- RimWorld Core --> <!-- notthesharpesttoolsintheshed -->
+	<ShortCircuitDischargedEnergy>{0} Wd of energy in the connected batteries has been discharged in an electrical explosion.</ShortCircuitDischargedEnergy> 
+	<!-- Patch_RT_Fuse -->
+	<ABraveNewMitigation>Fuses prevented a possible battery discharge.</ABraveNewMitigation>
+	<AProperMitigation>Battery discharge and any serious damage are prevented by the fuses.</AProperMitigation>
+	<!-- RT_Fuse -->
+	<RT_PartialMitigation>{0} Wd of energy in the connected batteries has been discharged, but {1} of it was mitigated by the fuses.</RT_PartialMitigation>
+	<RT_FullMitigation>{0} Wd of energy in the connected batteries has been discharged, but any serious damage was prevented by the fuses.</RT_FullMitigation>
+</LanguageData>
