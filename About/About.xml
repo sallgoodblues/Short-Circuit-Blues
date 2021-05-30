@@ -2,15 +2,20 @@
 <ModMetaData>
     <name>Short Circuit Blues</name>
     <author>Blues</author>
+	<url>https://steamcommunity.com/sharedfiles/filedetails/?id=2322956181</url>
     <supportedVersions>
         <li>1.2</li>
     </supportedVersions>
-    <description> 's all about short circuits.
+    <description> 'sall about Short Circuits!
 
-Configure power drain as you like, make it random for each battery in the system.
+- Configure the power drain in short circuit events.
+- Use with RT Fuse and/or Power Logic for extra features.
 
-Use with RT Fuse or Power Logic for extra features.
-
+v2.01 (Fire Update) notes:
+* Fixed power logic flicks for breaks.
+* New settings for fire, explosion, breakdowns and event letters.
+* Code cleanup and refactorings.
+* Settings menu fix and visual edits.
 	</description>
     <packageId>blues.shortcircuit</packageId>
 	<modDependencies>
