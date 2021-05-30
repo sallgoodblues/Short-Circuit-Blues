@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 
+	<!-- RT FUSE ||| On-Wall Fuse -->
+	
 	<Operation Class="PatchOperationFindMod">
 		<mods> <li>RT Fuse</li> </mods>
 		<match Class="PatchOperationSequence"> <operations>
@@ -54,12 +56,12 @@
 						</li>
 					</comps>
 				</ThingDef>
-				
+	
 			</value> </li>
 		</operations> </match>
 	</Operation>
 		
-	<!-- Seems Unnecessary 
+	<!-- POWER LOGIC ||| FLICKyness  			||| Using a Flick Bypass Code Instead, Thanks to Supes
 	<Operation Class="PatchOperationFindMod">
 		<mods> <li>Power Logic</li> </mods>
 		<match Class="PatchOperationSequence"> <operations>
@@ -67,9 +69,9 @@
 				<xpath>*/ThingDef[defName="SupesFuse"]</xpath> </li>
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/ThingDef[defName="SupesFuse"]/comps</xpath>
-						<value> <li Class="CompProperties_Flickable"/> </value>
+					<value> <li Class="CompProperties_Flickable"/> </value>
 				</li>
 		</operations> </match>
-	</Operation>
-	 -->
+	</Operation> -->	
+		
 </Patch>

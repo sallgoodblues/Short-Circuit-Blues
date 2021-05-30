@@ -1,81 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
 
-	<SrSettings>Battery Drain Settings</SrSettings>
-	<SrDrain>Drain: %{0}</SrDrain>
-	<SrDrainMin>Min Drain: %{0}</SrDrainMin>
-	<SrDrainMax>Max Drain: %{0}</SrDrainMax>
+	<SCB_Main>Short Circuit Blues</SCB_Main>
+	<SCB_DrainSet>Battery Drain Settings</SCB_DrainSet>
+	<SCB_Drain>Battery drain: %{0}</SCB_Drain>
+	<SCB_DrainMin>Battery drain min: %{0}</SCB_DrainMin>
+	<SCB_DrainMax>Battery drain max: %{0}</SCB_DrainMax>
 	
-    <ZzztNone>Short circuits will not drain any power from the batteries.</ZzztNone>
-    <ZzztAll>Short circuits will drain all {0} from the batteries.</ZzztAll>
-	<ZzztSome>Short circuits will drain %{1} {0} from the batteries.</ZzztSome>
-	<ZzztRand>Short circuits will randomly drain between %{1} and %{2} {0} from the batteries.</ZzztRand>	
+	<SCB_Stored>of Stored Energy</SCB_Stored>
+	<SCB_Total>of Total Capacity</SCB_Total>
+	<SCB_Rand>Randomized</SCB_Rand>
 
-	<SrGetFuse>Try with a fuse mod; </SrGetFuse>
-	<SrPowerLogic>Power Logic</SrPowerLogic>
-	<SrRTFuse>RT Fuse</SrRTFuse>
+	<SCB_Get>Try with a fuse mod; </SCB_Get>
+	<SCB_PL>Power Logic</SCB_PL>
+	<SCB_RT>RT Fuse</SCB_RT>
+	
 	
 	<!-- Non-Fused with Fuse Mods -->
-	<SrFuseless>Battery Drain without Fuse: {0}</SrFuseless>
-	<SrFuselessT>Non-fused power drain compared to the fused one.</SrFuselessT>
-	<SrTotalStored>Total Stored</SrTotalStored>
-	<SrSameFused>Same as Mitigated</SrSameFused>
-	<SrMultFused>{0} * Mitigated</SrMultFused>
-	<SrNonFusedSame>In a short circuit event whitout proper fuse mitigation, power drain will be same as the mitigated drain.</SrNonFusedSame>
-	<SrNonFusedTimes>In a short circuit event whitout proper fuse mitigation, power drain will be {0} * mitigated drain.</SrNonFusedTimes>
-	<SrNonFusedAll>In a short circuit event whitout proper fuse mitigation, all the stored power will be lost.</SrNonFusedAll>
+	<SCB_FuseLess>Battery Drain without Fuse: {0}</SCB_FuseLess>
+	
+	<SCB_FuselessTot>Total Stored</SCB_FuselessTot>
+	<SCB_FuselessSame>Same as Mitigated</SCB_FuselessSame>
+	<SCB_FuselessMult>{0} * Mitigated</SCB_FuselessMult>
+	
 	
 	<!-- RT Fuse -->
-	<RTFuseExtras>RT Fuse Extras</RTFuseExtras>
-	<RTMitigMult>Mitigation Power Multiplier: {0}</RTMitigMult>
-	<RTMitigMultN>No Mitigation Power Multiplier</RTMitigMultN>
-	<RTMitigMultT>Multiplier to be applied to the Circuit Breakers' mitigation power (w). This won't change the Circuit Breaker's name or description, but only it's function.</RTMitigMultT>
+	<SCB_RT_Settings>RT Fuse Settings</SCB_RT_Settings>
+	<SCB_RT_SettingsDesc>RT Fuses' mitigation power should exceed the total stored power in the network they are in.</SCB_RT_SettingsDesc>
+	<SCB_RT_Mult>Mitigation Power Multiplier: {0}</SCB_RT_Mult>
+	<SCB_RT_Mult_N>No Mitigation Power Multiplier</SCB_RT_Mult_N>
+	<SCB_RT_MultDesc>Fuses will be this much powerful. (This won't change the fuse description.)</SCB_RT_MultDesc>
 	
-	<RTSurplus>Surplus Mitigation Share: {0}*Surplus(W)</RTSurplus>
-	<RTSurplusN>No Surplus Mitigation Share</RTSurplusN>
-	<RTSurplusT>{0}*Mitigation Surplus(w) of the non-affected fuses will be reduced from each battery's power drain.</RTSurplusT>
 	
 	<!-- PowerLogic -->
-	<PowerLogicExtras>Power Logic Extras</PowerLogicExtras>
-	<PowerLogicExtrasT>Power Logic fuses should be placed on straight lines, not corners. They will only work properly if they are in between the battery and the short-circuit culprit. They won't be able to protect any parallel lines without a fuse. Their mitigation power is infinite, but only if placed properly.</PowerLogicExtrasT>
-	<PLFuseChance>Fuse chance: %{0}</PLFuseChance>
-	<PLFuseMin>Min Fuse chance: %{0}</PLFuseMin>
-	<PLFuseMax>Max Fuse chance: %{0}</PLFuseMax>
-	<PLFuseDefault>Fuse chance: %50 (Power Logic default)</PLFuseDefault>
-	<PLFuseChanceT>The chance for the connected fuses to be activated in a Short Circuit event. It's calculated seperately for each fuse in the system. Batteries on the other side of the disabled fuse will not be affected from any power drain. (Power Logic default is %50).</PLFuseChanceT>
+	<SCB_PL_Settings>Power Logic Settings</SCB_PL_Settings>
+	<SCB_PL_SettingsDesc>Power Logic fuses should be placed on straight lines, not corners. They usually won't be able to protect other conduits behind the batteries. Their mitigation power is infinite, but only if placed properly.</SCB_PL_SettingsDesc>
 	
-	<PLRand>Randomize Fuse Chance</PLRand>
-	<PLFlic>Flick instead of Breakdown Patch</PLFlic>
-	<PLFlicT>In a short circuit event, fuses will be flicked instead of breaking down.</PLFlicT>
-	<PLProtec>Prevent Explosions Patch</PLProtec>
-	<PLProtecT>Fuses will prevent explosions when properly activated.</PLProtecT>
+	<SCB_PL_Flic>Flick instead of Breakdown</SCB_PL_Flic>
+	<SCB_PL_Protec>Fuses Prevent Explosions</SCB_PL_Protec>
 	
-	<!-- SUMMARY -->
-	<SrSummary>Summary</SrSummary>
-	<SrStored>of the stored energy</SrStored>
-	<SrTotal>of the total capacity</SrTotal>
-	<SrRandomize>Randomize</SrRandomize> <SrRandomizeT>A little Randy-ness for the scene.</SrRandomizeT>
-	<SrStoredT>Power drain will be proportioned to the stored energy in the batteries.</SrStoredT>
-	<SrTotalT>Power drain will be proportioned to the total capacity of the batteries.</SrTotalT>
-	<!-- PL Summary -->
-	<PLSumRand>There is between %{0} and %{1}</PLSumRand> <PLSumSum>There is %{0}</PLSumSum>
-	<PLMidSum> chance for the closest fuses to the accident to </PLMidSum>
-	<PLFuseBreak>break</PLFuseBreak> <PLFuseFlick>flick</PLFuseFlick>
-	<PLEndProtec> and protect against any explosions or power loss as set.</PLEndProtec>
-	<PLEndWhack> to prevent power loss. But they won't protect against explosions as default.</PLEndWhack>
+	<SCB_PL_Chance>Fuse triggering chance: %{0}</SCB_PL_Chance>
+	<SCB_PL_ChanceDefault>Fuse chance: %50 (Power Logic default)</SCB_PL_ChanceDefault>
 	
-	<!-- RT Summary -->
-	<RTMtgMult>Circuit Breakers' mitigation (w) will be {0} times powerful.</RTMtgMult>
-	<RTMtgSame>Circuit Breakers' mitigation power will be the same as default.</RTMtgSame>
-	<RTSurplusNp>Excess mitigation power won't affect the power drain.</RTSurplusNp>
+	
+	<!-- Advanced -->
+	<SCB_Advanced>Advanced Settings</SCB_Advanced>
+	
+	<SCB_ExploWats>Fire to explosion power limit: {0} Watts</SCB_ExploWats>
+	<SCB_ExploWatsDesc>Non-Fused power discharges below this limit will result in fires instead of explosions. Default is ~20W.</SCB_ExploWatsDesc>
+	
+	<SCB_DmgOdds>Non-Fused fire or explosion chance: {0}%</SCB_DmgOdds>
+	<SCB_DmgOddsDesc>Chance of fire or explosions in a short circuit, if other conditions are met. Default is %100.</SCB_DmgOddsDesc>
+	
+	<SCB_DamageInstead>Apply damage on explosion bypass.</SCB_DamageInstead>
+	<SCB_DamageInsteadDesc>If an explosion didn't occur due to probability setting, do some blunt damage to the circuit instead.</SCB_DamageInsteadDesc>
+	
+	<SCB_BurnInstead>Start fire on explosion bypass.</SCB_BurnInstead>
+	<SCB_BurnInsteadDesc>If an explosion didn't occur due to probability setting, add some fire to the equation.</SCB_BurnInsteadDesc>
+	
+	<SCB_BrekOdds>Non-Fused breakdown probability: {0}%</SCB_BrekOdds>
+	<SCB_BrekOddsDesc>Adds breakdown chance to the short-circuited building if the short circuit wasn't mitigated.</SCB_BrekOddsDesc>	
+	
+	<SCB_Explorad>Explosion radius multiplier: *{0}</SCB_Explorad>
+	<SCB_ExploradDesc>Can be huge, use at your own risk.</SCB_ExploradDesc>
+	
+	<SCB_SoundFused>Fuse sound from short circuits</SCB_SoundFused>
+	<SCB_RemoveLetter>Show message instead of letter</SCB_RemoveLetter>
+	
+	
+	<!-- Message -->
+	<SCB_Message1_0>A fault in {0} caused a short circuit.</SCB_Message1_0>
+	<SCB_Message1_1>A fault in {0} caused a short circuit and some damage.</SCB_Message1_1>
+	<SCB_Message1_2>A fault in {0} caused a short circuit with a fire.</SCB_Message1_2>
+	<SCB_Message1_3>A fault in {0} caused a short circuit with an explosion.</SCB_Message1_3>
+	<SCB_Message1_4>A fault in {0} caused a short circuit with a huge explosion.</SCB_Message1_4>
+
+	<SCB_Message2_1> {0} Wd of energy was discharged.</SCB_Message2_1>
+	
 	
 	<!-- EVENT -->
-	<!-- RimWorld Core --> <!-- notthesharpesttoolsintheshed -->
-	<ShortCircuitDischargedEnergy>{0} Wd of energy in the connected batteries has been discharged in an electrical explosion.</ShortCircuitDischargedEnergy> 
-	<!-- Patch_RT_Fuse -->
-	<ABraveNewMitigation>Fuses prevented a possible battery discharge.</ABraveNewMitigation>
-	<AProperMitigation>Battery discharge and any serious damage are prevented by the fuses.</AProperMitigation>
-	<!-- RT_Fuse -->
-	<RT_PartialMitigation>{0} Wd of energy in the connected batteries has been discharged, but {1} of it was mitigated by the fuses.</RT_PartialMitigation>
-	<RT_FullMitigation>{0} Wd of energy in the connected batteries has been discharged, but any serious damage was prevented by the fuses.</RT_FullMitigation>
+	<SCB_tried>Fuses mitigated some of the loss but it wasn't enough.</SCB_tried>
+	
+	<SCB_discharged>{0} Wd of energy in the connected batteries has been discharged</SCB_discharged>
+	
+	<SCB_exploded> and caused an explosion.</SCB_exploded>
+	<SCB_burnt> and started a fire.</SCB_burnt>
+	<SCB_hurt> and caused some damage.</SCB_hurt>
+	<SCB_sallgood>, but there wasn't any damage.</SCB_sallgood>
+	
+	<SCB_fused>Fuses prevented any possible power discharge.</SCB_fused>
+	<SCB_nothing>There wasn't any battery discharge.</SCB_nothing>
+
 </LanguageData>
