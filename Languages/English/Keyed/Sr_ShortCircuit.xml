@@ -31,6 +31,9 @@
 	<SCB_RT_Mult_N>No Mitigation Power Multiplier</SCB_RT_Mult_N>
 	<SCB_RT_MultDesc>Fuses will be this much powerful. (This won't change the fuse description.)</SCB_RT_MultDesc>
 	
+	<SCB_RTZero>Proper activation without batteries</SCB_RTZero>
+	<SCB_RTZeroDesc>On default, RT Fuses protect against fires even when they are broken or flicked when there's a power source but no battery. This makes it so that they can only protect when they are capable.</SCB_RTZeroDesc>
+	
 	
 	<!-- PowerLogic -->
 	<SCB_PL_Settings>Power Logic Settings</SCB_PL_Settings>
@@ -46,7 +49,10 @@
 	<!-- Advanced -->
 	<SCB_Advanced>Advanced Settings</SCB_Advanced>
 	
-	<SCB_ExploWats>Fire to explosion power limit: {0} Watts</SCB_ExploWats>
+	<SCB_FireWats>Minimum power limit (energy gain) for fires: {0} Watts</SCB_FireWats>
+	<SCB_FireWatsDesc>Non-Fused power discharges below this limit will not cause any fire or explosions.</SCB_FireWatsDesc>
+	
+	<SCB_ExploWats>Minimum power limit (stored) for explosions: {0} Watts</SCB_ExploWats>
 	<SCB_ExploWatsDesc>Non-Fused power discharges below this limit will result in fires instead of explosions. Default is ~20W.</SCB_ExploWatsDesc>
 	
 	<SCB_DmgOdds>Non-Fused fire or explosion chance: {0}%</SCB_DmgOdds>
